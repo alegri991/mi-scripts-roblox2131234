@@ -9,7 +9,10 @@ local ESP = {
 	Distance = false, 
 
 	Tracers = false, 
-	UnlockTracers = false, 
+	UnlockTracers = false,
+
+    TeamCheck = false
+    UseTeamColor = false
 
 	Objects = setmetatable({}, {__mode = "kv"}), 
 	Overrides = {}
@@ -43,8 +46,13 @@ function ESP:GetColor(obj)
 
 	local p = self:GetPlrFromChar(obj)
 
+if p and ESP.UseTeamColor and p.TeamColor then
+		return p.TeamColor.Color
+	end
+
 	return p and self.Color
 end
+
 
 function ESP:GetPlrFromChar(char)
 	local ov = self.Overrides.GetPlrFromChar
