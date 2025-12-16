@@ -1116,6 +1116,13 @@ end, "EspTracers")
 v101:AddToggle("Unlock Tracers", false, function(p239)
     vu2.UnlockTracers = p239
 end, "EspUnlockTracers")
+v101:AddToggle("Team Check", false, function(v)
+    vu2.TeamCheck = v
+end, "EspTeamCheck")
+
+v101:AddToggle("Use Team Color", false, function(v)
+    vu2.UseTeamColor = v
+end, "EspUseTeamColor")
 v102:AddToggle("Disable Shadows", not vu7.GlobalShadows, function(p240)
     vu7.GlobalShadows = not p240
 end, "GlobalShadows")
