@@ -9,10 +9,7 @@ local ESP = {
 	Distance = false, 
 
 	Tracers = false, 
-	UnlockTracers = false,
-
-    TeamCheck = false,
-    UseTeamColor = false,
+	UnlockTracers = false, 
 
 	Objects = setmetatable({}, {__mode = "kv"}), 
 	Overrides = {}
@@ -46,13 +43,8 @@ function ESP:GetColor(obj)
 
 	local p = self:GetPlrFromChar(obj)
 
-if p and ESP.UseTeamColor and p.TeamColor then
-		return p.TeamColor.Color
-	end
-
 	return p and self.Color
 end
-
 
 function ESP:GetPlrFromChar(char)
 	local ov = self.Overrides.GetPlrFromChar
@@ -255,23 +247,9 @@ function boxBase:Update()
 end
 
 function ESP:Add(obj, options)
-	options = options or {}
-
 	if not obj.Parent and not options.RenderInNil then
 		return warn(obj, "has no parent")
 	end
-
-	if ESP.TeamCheck then
-		local player = options.Player or Players:GetPlayerFromCharacter(obj)
-		local localPlayer = Players.LocalPlayer
-
-		if player and localPlayer and player.Team ~= nil and localPlayer.Team ~= nil then
-			if player.Team == localPlayer.Team then
-				return
-			end
-		end
-	end
-
 
 	local box = setmetatable({
 		Name = options.Name or obj.Name, 
