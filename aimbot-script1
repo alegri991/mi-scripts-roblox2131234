@@ -1119,7 +1119,6 @@ end, "EspUnlockTracers")
 v101:AddToggle("Team Check", false, function(v)
     vu2.TeamCheck = v
 end, "EspTeamCheck")
-
 v101:AddToggle("Use Team Color", false, function(v)
     vu2.UseTeamColor = v
 end, "EspUseTeamColor")
