@@ -11,8 +11,8 @@ local ESP = {
 	Tracers = false, 
 	UnlockTracers = false,
 
-    TeamCheck = false
-    UseTeamColor = false
+    TeamCheck = false,
+    UseTeamColor = false,
 
 	Objects = setmetatable({}, {__mode = "kv"}), 
 	Overrides = {}
