@@ -1,14 +1,8 @@
---[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
--- ts file was generated at discord.gg/25ms
-
-
 repeat
     task.wait()
 until game:IsLoaded()
-local v1 = loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureLibrary"))()
-local vu2 = loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModdedESP"))()
+local v1 = loadstring(game:HttpGet("Aqui va AzureLibrary"))()
+local vu2 = loadstring(game:HttpGet("Aqui va AzureModded"))()
 local vu3 = game:GetService("RunService")
 local vu4 = game:GetService("UserInputService")
 local vu5 = game:GetService("Workspace")
@@ -1116,12 +1110,6 @@ end, "EspTracers")
 v101:AddToggle("Unlock Tracers", false, function(p239)
     vu2.UnlockTracers = p239
 end, "EspUnlockTracers")
-v101:AddToggle("Team Check", false, function(v)
-    vu2.TeamCheck = v
-end, "EspTeamCheck")
-v101:AddToggle("Use Team Color", false, function(v)
-    vu2.UseTeamColor = v
-end, "EspUseTeamColor")
 v102:AddToggle("Disable Shadows", not vu7.GlobalShadows, function(p240)
     vu7.GlobalShadows = not p240
 end, "GlobalShadows")
