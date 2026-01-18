@@ -1,8 +1,14 @@
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+-- ts file was generated at discord.gg/25ms
+
+
 repeat
     task.wait()
 until game:IsLoaded()
-local v1 = loadstring(game:HttpGet("Aqui va AzureLibrary"))()
-local vu2 = loadstring(game:HttpGet("Aqui va AzureModded"))()
+local v1 = loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureLibrary"))()
+local vu2 = loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModdedESP"))()
 local vu3 = game:GetService("RunService")
 local vu4 = game:GetService("UserInputService")
 local vu5 = game:GetService("Workspace")
